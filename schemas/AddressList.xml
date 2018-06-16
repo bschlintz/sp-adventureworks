@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-FFD1D872304D438283D70A3AEBC3DC58">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-FFD1D872304D438283D70A3AEBC3DC58" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Address" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Address" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Address/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Address/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Address/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{3A672AF0-05E2-414C-803E-4A26D9293BE6}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/advworks/Lists/Address/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="AddressLine1" />
+                <FieldRef Name="AddressLine2" />
+                <FieldRef Name="City" />
+                <FieldRef Name="StateProvince" />
+                <FieldRef Name="CountryRegion" />
+                <FieldRef Name="PostalCode" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="AddressLine1" MaxLength="255" Title="AddressLine1" Type="Text" ID="{b8dfa5d7-a020-4afb-863c-2bb0a140cc33}" SourceID="{{listid:Address}}" StaticName="AddressLine1" Name="AddressLine1" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="AddressLine2" MaxLength="255" Title="AddressLine2" Type="Text" ID="{a0f72334-8eb6-4446-a90e-ea9d9fe389bf}" SourceID="{{listid:Address}}" StaticName="AddressLine2" Name="AddressLine2" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="City" MaxLength="255" Title="City" Type="Text" ID="{c2ccfe1f-0338-48d5-b055-f28aa78eb556}" SourceID="{{listid:Address}}" StaticName="City" Name="City" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="StateProvince" MaxLength="255" Title="StateProvince" Type="Text" ID="{d864c2a9-fe71-4736-ba85-bc29cbcb60a3}" SourceID="{{listid:Address}}" StaticName="StateProvince" Name="StateProvince" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="CountryRegion" MaxLength="255" Title="CountryRegion" Type="Text" ID="{a2abb7f0-2818-4d4f-8148-038bdabe1927}" SourceID="{{listid:Address}}" StaticName="CountryRegion" Name="CountryRegion" ColName="nvarchar8" RowOrdinal="0" />
+            <Field DisplayName="PostalCode" MaxLength="255" Title="PostalCode" Type="Text" ID="{4594cd6b-914e-42ee-b842-dff01b5a09ff}" SourceID="{{listid:Address}}" StaticName="PostalCode" Name="PostalCode" ColName="nvarchar9" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3a6b296c-3f50-445c-a13f-9c679ea9dda3" Name="ComplianceAssetId" DisplayName="Compliance Asset Id" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
