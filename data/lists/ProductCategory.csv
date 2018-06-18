@@ -1,4 +1,4 @@
-﻿ProductCategoryID,ParentProductCategoryID,Name
+﻿ProductCategoryID,ParentProductCategoryID,Title
 1,,Bikes
 2,,Components
 3,,Clothing

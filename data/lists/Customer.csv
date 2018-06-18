@@ -1,4 +1,4 @@
-﻿CustomerID,Title,FirstName,MiddleName,LastName,Suffix,CompanyName,SalesPerson,EmailAddress,Phone
+﻿Title,Prefix,FirstName,MiddleName,LastName,Suffix,CompanyName,SalesPerson,EmailAddress,Phone
 1,Mr.,Orlando,N.,Gee,,A Bike Store,adventure-works\pamela0,orlando0@adventure-works.com,245-555-01730.
 2,Mr.,Keith,,Harris,,Progressive Sports,adventure-works\david8,keith0@adventure-works.com,170-555-0127
 3,Ms.,Donna,F.,Carreras,,Advanced Bike Components,adventure-works\jillian0,donna0@adventure-works.com,279-555-0130
