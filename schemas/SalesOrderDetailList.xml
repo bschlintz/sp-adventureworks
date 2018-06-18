@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-990929535EDC408082CC3E7878D5CBF3">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-990929535EDC408082CC3E7878D5CBF3" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="SalesOrderDetail" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/SalesOrderDetail" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/SalesOrderDetail/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/SalesOrderDetail/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/SalesOrderDetail/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{EE5FE15F-336F-40B9-AAFB-D92C42B4D8DB}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/advworks/Lists/SalesOrderDetail/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="SalesOrderID" />
+                <FieldRef Name="OrderQty" />
+                <FieldRef Name="ProductID" />
+                <FieldRef Name="UnitPrice" />
+                <FieldRef Name="UnitPriceDiscount" />
+                <FieldRef Name="LineTotal" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="SalesOrderID" MaxLength="255" Title="SalesOrderID" Type="Text" ID="{9d5b1db1-c56b-4803-9d40-f2d353146ab7}" SourceID="{{listid:SalesOrderDetail}}" StaticName="SalesOrderID" Name="SalesOrderID" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Decimals="0" DisplayName="OrderQty" Percentage="FALSE" Title="OrderQty" Type="Number" ID="{9bf4eefa-7fd2-49bf-b809-1384addfe229}" SourceID="{{listid:SalesOrderDetail}}" StaticName="OrderQty" Name="OrderQty" ColName="float1" RowOrdinal="0" />
+            <Field DisplayName="ProductID" MaxLength="255" Title="ProductID" Type="Text" ID="{9ab665ae-d02b-4a71-8644-df28a089dfd7}" SourceID="{{listid:SalesOrderDetail}}" StaticName="ProductID" Name="ProductID" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="UnitPrice" LCID="1033" Title="UnitPrice" Type="Currency" ID="{5383055f-15bd-4be7-9c33-ecf0dd84e810}" SourceID="{{listid:SalesOrderDetail}}" StaticName="UnitPrice" Name="UnitPrice" ColName="float2" RowOrdinal="0" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Decimals="2" Version="1" />
+            <Field Name="UnitPriceDiscount" FromBaseType="FALSE" Type="Number" DisplayName="UnitPriceDiscount" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="TRUE" ID="{f10437ee-7240-4e3e-99f7-b178c8aa84ac}" Version="1" StaticName="UnitPriceDiscount" SourceID="{{listid:SalesOrderDetail}}" ColName="float3" RowOrdinal="0" />
+            <Field Type="Calculated" DisplayName="LineTotal" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Currency" ReadOnly="TRUE" ID="{830e1213-2a4d-436b-9f55-675fe007f2b2}" SourceID="{{listid:SalesOrderDetail}}" StaticName="LineTotal" Name="LineTotal" ColName="sql_variant1" RowOrdinal="0">
+              <Formula>=(UnitPrice-(UnitPriceDiscount*UnitPrice))*OrderQty</Formula>
+            </Field>
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3a6b296c-3f50-445c-a13f-9c679ea9dda3" Name="ComplianceAssetId" DisplayName="Compliance Asset Id" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

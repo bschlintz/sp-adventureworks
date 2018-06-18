@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-990929535EDC408082CC3E7878D5CBF3">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-990929535EDC408082CC3E7878D5CBF3" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="SalesOrderHeader" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/SalesOrderHeader" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/SalesOrderHeader/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/SalesOrderHeader/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/SalesOrderHeader/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{94472DD0-1EF8-4D3A-B753-4DDF4C7D1B71}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/advworks/Lists/SalesOrderHeader/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="OrderDate" />
+                <FieldRef Name="DueDate" />
+                <FieldRef Name="ShipDate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="SalesOrderNumber" />
+                <FieldRef Name="PurchaseOrderNumber" />
+                <FieldRef Name="AccountNumber" />
+                <FieldRef Name="CustomerID" />
+                <FieldRef Name="ShipToAddressID" />
+                <FieldRef Name="BillToAddressID" />
+                <FieldRef Name="ShipMethod" />
+                <FieldRef Name="SubTotal" />
+                <FieldRef Name="TaxAmt" />
+                <FieldRef Name="Freight" />
+                <FieldRef Name="TotalDue" />
+                <FieldRef Name="Comment" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="OrderDate" FriendlyDisplayFormat="Disabled" Format="DateOnly" Title="OrderDate" Type="DateTime" ID="{3dea4b8d-5edf-4234-97e4-1b2864e6f97f}" SourceID="{{listid:SalesOrderHeader}}" StaticName="OrderDate" Name="OrderDate" ColName="datetime1" RowOrdinal="0" />
+            <Field DisplayName="DueDate" FriendlyDisplayFormat="Disabled" Format="DateOnly" Title="DueDate" Type="DateTime" ID="{15cd9e97-caa5-4b5c-b7d2-91a9ed916408}" SourceID="{{listid:SalesOrderHeader}}" StaticName="DueDate" Name="DueDate" ColName="datetime2" RowOrdinal="0" />
+            <Field DisplayName="ShipDate" FriendlyDisplayFormat="Disabled" Format="DateOnly" Title="ShipDate" Type="DateTime" ID="{831cdf53-31c3-492a-8864-d6c28561ac21}" SourceID="{{listid:SalesOrderHeader}}" StaticName="ShipDate" Name="ShipDate" ColName="datetime3" RowOrdinal="0" />
+            <Field DisplayName="Status" FillInChoice="FALSE" Title="Status" Type="Choice" ID="{1cae06b5-d48d-4090-be6d-0415ce4ee06e}" SourceID="{{listid:SalesOrderHeader}}" StaticName="Status" Name="Status" ColName="nvarchar4" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>New</CHOICE>
+                <CHOICE>Active</CHOICE>
+                <CHOICE>Complete</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Calculated" DisplayName="SalesOrderNumber" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Text" ReadOnly="TRUE" ID="{05b2f6c8-7009-4cc2-b513-32d09000380d}" SourceID="{{listid:SalesOrderHeader}}" StaticName="SalesOrderNumber" Name="SalesOrderNumber" ColName="sql_variant1" RowOrdinal="0">
+              <Formula>="SO"&amp;Title</Formula>
+            </Field>
+            <Field DisplayName="PurchaseOrderNumber" MaxLength="255" Title="PurchaseOrderNumber" Type="Text" ID="{0dcb93ef-b0ef-4004-8f9c-21569916673f}" SourceID="{{listid:SalesOrderHeader}}" StaticName="PurchaseOrderNumber" Name="PurchaseOrderNumber" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="AccountNumber" MaxLength="255" Title="AccountNumber" Type="Text" ID="{8e1dfd0b-bff3-412c-9780-7fedfb702c5c}" SourceID="{{listid:SalesOrderHeader}}" StaticName="AccountNumber" Name="AccountNumber" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="CustomerID" MaxLength="255" Title="CustomerID" Type="Text" ID="{6886cec8-4db9-4c40-8587-b68598c05487}" SourceID="{{listid:SalesOrderHeader}}" StaticName="CustomerID" Name="CustomerID" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="ShipToAddressID" MaxLength="255" Title="ShipToAddressID" Type="Text" ID="{688ca8fb-e189-4090-9dcf-07c710097424}" SourceID="{{listid:SalesOrderHeader}}" StaticName="ShipToAddressID" Name="ShipToAddressID" ColName="nvarchar8" RowOrdinal="0" />
+            <Field DisplayName="BillToAddressID" MaxLength="255" Title="BillToAddressID" Type="Text" ID="{a4eb0399-9824-4b0b-894f-b996f8751116}" SourceID="{{listid:SalesOrderHeader}}" StaticName="BillToAddressID" Name="BillToAddressID" ColName="nvarchar9" RowOrdinal="0" />
+            <Field DisplayName="ShipMethod" MaxLength="255" Title="ShipMethod" Type="Text" ID="{9bc32928-b5dd-41ca-8c1c-10c095636520}" SourceID="{{listid:SalesOrderHeader}}" StaticName="ShipMethod" Name="ShipMethod" ColName="nvarchar10" RowOrdinal="0" />
+            <Field DisplayName="SubTotal" LCID="1033" Title="SubTotal" Type="Currency" ID="{93ea7401-681a-4091-b1d6-5a1a6fddc467}" SourceID="{{listid:SalesOrderHeader}}" StaticName="SubTotal" Name="SubTotal" ColName="float1" RowOrdinal="0" />
+            <Field DisplayName="TaxAmt" LCID="1033" Title="TaxAmt" Type="Currency" ID="{f7eb34d1-56fa-4517-99b8-330772248ce4}" SourceID="{{listid:SalesOrderHeader}}" StaticName="TaxAmt" Name="TaxAmt" ColName="float2" RowOrdinal="0" />
+            <Field DisplayName="Freight" LCID="1033" Title="Freight" Type="Currency" ID="{eb386f00-457b-4724-9cf3-496364eb016f}" SourceID="{{listid:SalesOrderHeader}}" StaticName="Freight" Name="Freight" ColName="float3" RowOrdinal="0" />
+            <Field Type="Calculated" DisplayName="TotalDue" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Currency" ReadOnly="TRUE" ID="{8c138fd7-0cd4-4992-b585-55791a85a8bb}" SourceID="{{listid:SalesOrderHeader}}" StaticName="TotalDue" Name="TotalDue" ColName="sql_variant2" RowOrdinal="0">
+              <Formula>=SubTotal+TaxAmt+Freight</Formula>
+            </Field>
+            <Field AppendOnly="FALSE" DisplayName="Comment" IsolateStyles="FALSE" NumLines="6" RichText="FALSE" RichTextMode="Compatible" Title="Comment" Type="Note" ID="{74ec6b64-8bc5-42ca-b19b-0404604fb02d}" SourceID="{{listid:SalesOrderHeader}}" StaticName="Comment" Name="Comment" ColName="ntext2" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3a6b296c-3f50-445c-a13f-9c679ea9dda3" Name="ComplianceAssetId" DisplayName="Compliance Asset Id" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

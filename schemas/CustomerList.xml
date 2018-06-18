@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-990929535EDC408082CC3E7878D5CBF3">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-990929535EDC408082CC3E7878D5CBF3" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Customer" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Customer" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Customer/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Customer/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Customer/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{AB1B9E29-8396-4BB5-8A63-D998BE8221D0}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/advworks/Lists/Customer/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Prefix" />
+                <FieldRef Name="FirstName" />
+                <FieldRef Name="MiddleName" />
+                <FieldRef Name="LastName" />
+                <FieldRef Name="Suffix" />
+                <FieldRef Name="CompanyName" />
+                <FieldRef Name="SalesPerson" />
+                <FieldRef Name="EmailAddress" />
+                <FieldRef Name="Phone" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Prefix" MaxLength="255" Title="Prefix" Type="Text" ID="{cc06b233-2b7b-4342-9e3a-a69e49a4a98a}" SourceID="{{listid:Customer}}" StaticName="Prefix" Name="Prefix" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="FirstName" MaxLength="255" Title="FirstName" Type="Text" ID="{83565c0c-8762-4201-8e37-a24fb23438dd}" SourceID="{{listid:Customer}}" StaticName="FirstName" Name="FirstName" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="MiddleName" MaxLength="255" Title="MiddleName" Type="Text" ID="{876f35a6-d1ab-47ba-887f-5317c6f244c2}" SourceID="{{listid:Customer}}" StaticName="MiddleName" Name="MiddleName" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="LastName" MaxLength="255" Title="LastName" Type="Text" ID="{a12ab51c-1420-4862-89c3-624fa0e8cde1}" SourceID="{{listid:Customer}}" StaticName="LastName" Name="LastName" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="Suffix" MaxLength="255" Title="Suffix" Type="Text" ID="{0ac6e5d5-a80d-4d95-9d19-3719c20dcb5f}" SourceID="{{listid:Customer}}" StaticName="Suffix" Name="Suffix" ColName="nvarchar8" RowOrdinal="0" />
+            <Field DisplayName="CompanyName" MaxLength="255" Title="CompanyName" Type="Text" ID="{5e50ffd9-8515-42c5-be12-0cf8caa3d128}" SourceID="{{listid:Customer}}" StaticName="CompanyName" Name="CompanyName" ColName="nvarchar9" RowOrdinal="0" />
+            <Field DisplayName="SalesPerson" MaxLength="255" Title="SalesPerson" Type="Text" ID="{3fa5c0b3-8af7-4e20-813b-b717da1ada08}" SourceID="{{listid:Customer}}" StaticName="SalesPerson" Name="SalesPerson" ColName="nvarchar10" RowOrdinal="0" />
+            <Field DisplayName="EmailAddress" MaxLength="255" Title="EmailAddress" Type="Text" ID="{cafcd275-f0b5-411e-88f1-0f5d630897ed}" SourceID="{{listid:Customer}}" StaticName="EmailAddress" Name="EmailAddress" ColName="nvarchar11" RowOrdinal="0" />
+            <Field DisplayName="Phone" MaxLength="255" Title="Phone" Type="Text" ID="{7064712f-653f-4c09-9024-f9aeab38c910}" SourceID="{{listid:Customer}}" StaticName="Phone" Name="Phone" ColName="nvarchar12" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="3a6b296c-3f50-445c-a13f-9c679ea9dda3" Name="ComplianceAssetId" DisplayName="Compliance Asset Id" />
+            <pnp:FieldRef ID="ccc1037f-f65e-434a-868e-8c98af31fe29" Name="_ComplianceFlags" DisplayName="Label setting" />
+            <pnp:FieldRef ID="d4b6480a-4bed-4094-9a52-30181ea38f1d" Name="_ComplianceTag" DisplayName="Labels" />
+            <pnp:FieldRef ID="92be610e-ddbb-49f4-b3b1-5c2bc768df8f" Name="_ComplianceTagWrittenTime" DisplayName="Label Applied" />
+            <pnp:FieldRef ID="418d7676-2d6f-42cf-a16a-e43d2971252a" Name="_ComplianceTagUserId" DisplayName="Label applied by" />
+            <pnp:FieldRef ID="8382d247-72a9-44b1-9794-7b177edc89f3" Name="_IsRecord" DisplayName="Item is a Record" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
