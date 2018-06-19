@@ -1,4 +1,5 @@
 param(
+  [Parameter(Mandatory=$true)]
   $SiteUrl,
   [Switch]$SkipLoadData
 )

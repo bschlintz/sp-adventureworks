@@ -1,4 +1,5 @@
 param(
+  [Parameter(Mandatory=$true)]
   $SiteUrl,
   $ItemBatchSize = 100,
   $FileBatchSize = 10,
