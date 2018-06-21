@@ -16,7 +16,7 @@ if (!$LibrariesOnly) {
     $List = Get-PnPList $ListTitle -EA 0
     if ($List -eq $null) {
       Write-Host "$(Get-Date): [$ListTitle]: List doesn't exist" -ForegroundColor Yellow
-      return
+      continue
     }
 
     Write-Host "$(Get-Date): [$ListTitle]: Found list" -ForegroundColor Green
@@ -24,7 +24,7 @@ if (!$LibrariesOnly) {
     $ListData = ConvertFrom-Csv (Get-Content $ListCSV.FullName)
     if ($ListData.Count -eq 0) {
       Write-Host "$(Get-Date):   No rows found in CSV" -ForegroundColor Yellow
-      return
+      continue
     }
 
     Write-Host "$(Get-Date):   Loading $($ListData.Count) items from CSV"
@@ -66,7 +66,7 @@ if (!$ListsOnly) {
 
     if ($Library -eq $null) {
       Write-Host "$(Get-Date): [$LibraryTitle]: Library doesn't exist" -ForegroundColor Yellow
-      return
+      continue
     }
 
     Write-Host "$(Get-Date): [$LibraryTitle]: Found library" -ForegroundColor Green
@@ -74,7 +74,7 @@ if (!$ListsOnly) {
     $LibraryFiles = Get-ChildItem $LibraryFolder\*.*
     if ($LibraryFiles.Count -eq 0) {
       Write-Host "$(Get-Date):   No files found in folder" -ForegroundColor Yellow
-      return
+      continue
     }
 
     Write-Host "$(Get-Date):   Uploading $($LibraryFiles.Count) files from folder"
